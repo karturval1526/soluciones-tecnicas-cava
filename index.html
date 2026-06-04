@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Soluciones Técnicas CAVA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,105 +18,219 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
-color:#333;
+background:#f8fafc;
+color:#334155;
 }
 
-header{
-background:linear-gradient(135deg,#0d47a1,#1976d2);
+/* MENU */
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:700;
+color:#0f172a;
+}
+
+.logo span{
+color:#22c55e;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#334155;
+font-weight:500;
+}
+
+.whatsapp-btn{
+background:#22c55e;
+padding:12px 20px;
+border-radius:50px;
 color:white;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(
+rgba(255,255,255,.75),
+rgba(255,255,255,.75)
+),
+
+url('img/portada.jpg');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
 text-align:center;
-padding:100px 20px;
+padding:20px;
 }
 
-header h1{
-font-size:3rem;
-margin-bottom:15px;
+.hero-content{
+max-width:850px;
 }
 
-header p{
-font-size:1.2rem;
-margin-bottom:25px;
+.hero h1{
+font-size:4rem;
+color:#0f172a;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#22c55e;
+}
+
+.hero p{
+font-size:1.3rem;
+line-height:1.8;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
 padding:15px 30px;
-background:#25D366;
+background:#22c55e;
 color:white;
 text-decoration:none;
 border-radius:50px;
-font-weight:bold;
-transition:.3s;
+font-weight:600;
+margin:10px;
 }
 
-.btn:hover{
-transform:scale(1.05);
+.btn-secondary{
+display:inline-block;
+padding:15px 30px;
+background:white;
+color:#0f172a;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
+
+/* SECCIONES */
 
 .container{
 max-width:1200px;
 margin:auto;
-padding:60px 20px;
+padding:90px 20px;
 }
 
 .section-title{
 text-align:center;
-font-size:2.3rem;
-margin-bottom:40px;
-color:#0d47a1;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#0f172a;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .card h3{
+color:#0d47a1;
 margin-bottom:15px;
-color:#1976d2;
 }
 
-.price-section{
-background:#0d47a1;
+/* PRECIO */
+
+.pricing{
+background:#0f172a;
 color:white;
 text-align:center;
-padding:70px 20px;
+padding:90px 20px;
 }
 
 .price{
-font-size:4rem;
-font-weight:bold;
+font-size:5rem;
+font-weight:700;
+color:#22c55e;
 margin:20px 0;
 }
 
 .features{
-list-style:none;
-max-width:500px;
+max-width:600px;
 margin:auto;
 text-align:left;
 }
 
 .features li{
-padding:10px;
+padding:12px;
+list-style:none;
 }
+
+/* CONFIANZA */
+
+.trust{
+background:#ecfdf5;
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.trust-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+/* CONTACTO */
 
 .contact{
 text-align:center;
@@ -120,67 +241,114 @@ background:white;
 max-width:700px;
 margin:auto;
 padding:40px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
+
+/* FOOTER */
 
 footer{
-background:#111;
+background:#111827;
 color:white;
 text-align:center;
-padding:25px;
-margin-top:40px;
+padding:30px;
 }
 
-.whatsapp{
+/* BOTON FLOTANTE */
+
+.float{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
-color:white;
-width:60px;
-height:60px;
+background:#22c55e;
+width:65px;
+height:65px;
 border-radius:50%;
 display:flex;
-justify-content:center;
 align-items:center;
-font-size:28px;
+justify-content:center;
+font-size:30px;
 text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
+color:white;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+nav ul{
+display:none;
+}
+
+.price{
+font-size:3rem;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<nav>
 
-<h1>SOLUCIONES TÉCNICAS CAVA</h1>
+<div class="nav-container">
+
+<div class="logo">
+SOLUCIONES <span>TÉCNICAS CAVA</span>
+</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#planes">Diseño Web</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+
+<a href="https://wa.me/573167341294" class="whatsapp-btn">
+WhatsApp
+</a>
+
+</div>
+
+</nav>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>
+Tecnología que impulsa tu negocio al <span>siguiente nivel</span>
+</h1>
 
 <p>
-Soporte Técnico • Diseño Web • Instalación de Sistemas • Soluciones Digitales
+Diseño web profesional, soporte técnico y soluciones digitales para empresas y emprendedores que buscan crecer con confianza.
 </p>
 
-<a class="btn" href="https://wa.me/573167341294">
+<a href="https://wa.me/573167341294" class="btn">
 Cotizar Ahora
 </a>
 
-</header>
+<a href="#servicios" class="btn-secondary">
+Ver Servicios
+</a>
 
-<section class="container">
-
-<h2 class="section-title">
-¿Quiénes Somos?
-</h2>
-
-<p style="text-align:center;font-size:1.1rem;">
-Ayudamos a personas, emprendedores y empresas a mejorar su tecnología y presencia digital mediante soluciones profesionales, rápidas y confiables.
-</p>
+</div>
 
 </section>
 
-<section class="container">
+<section class="container" id="servicios">
 
 <h2 class="section-title">
 Nuestros Servicios
@@ -194,35 +362,35 @@ Nuestros Servicios
 </div>
 
 <div class="card">
-<h3>⚙️ Sistemas Operativos</h3>
-<p>Instalación y configuración de Windows y Linux.</p>
+<h3>🚀 Diseño Web</h3>
+<p>Páginas web modernas, rápidas y profesionales.</p>
 </div>
 
 <div class="card">
-<h3>🚀 Diseño Web</h3>
-<p>Páginas web profesionales para empresas y negocios.</p>
+<h3>⚙️ Sistemas Operativos</h3>
+<p>Instalación de Windows y Linux.</p>
 </div>
 
 <div class="card">
 <h3>💾 Instalación SSD</h3>
-<p>Aumenta la velocidad y rendimiento de tu equipo.</p>
+<p>Mejora el rendimiento de tu computador.</p>
 </div>
 
 <div class="card">
-<h3>🌐 Redes y WiFi</h3>
-<p>Configuración y optimización de redes domésticas y empresariales.</p>
+<h3>🌐 Redes WiFi</h3>
+<p>Configuración y optimización de redes.</p>
 </div>
 
 <div class="card">
 <h3>🔒 Seguridad Informática</h3>
-<p>Eliminación de virus y protección de equipos.</p>
+<p>Protección y limpieza de virus.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="price-section">
+<section class="pricing" id="planes">
 
 <h2>Página Web Profesional</h2>
 
@@ -232,24 +400,56 @@ $490.000
 
 <ul class="features">
 
-<li>✅ Diseño moderno y profesional</li>
-<li>✅ Compatible con celulares y computadores</li>
+<li>✅ Diseño Profesional</li>
+<li>✅ Compatible con celulares</li>
 <li>✅ Integración con WhatsApp</li>
 <li>✅ Formulario de contacto</li>
-<li>✅ Optimización SEO básica</li>
-<li>✅ Soporte inicial incluido</li>
+<li>✅ SEO básico</li>
+<li>✅ Soporte inicial</li>
 
 </ul>
 
 <br>
 
-<a class="btn" href="https://wa.me/573167341294">
+<a href="https://wa.me/573167341294" class="btn">
 Solicitar Cotización
 </a>
 
 </section>
 
-<section class="container contact">
+<section class="container trust">
+
+<h2 class="section-title">
+¿Por qué elegirnos?
+</h2>
+
+<div class="trust-grid">
+
+<div class="trust-box">
+<h3>🤝 Atención Personalizada</h3>
+<p>Escuchamos tus necesidades y proponemos soluciones reales.</p>
+</div>
+
+<div class="trust-box">
+<h3>⚡ Respuesta Rápida</h3>
+<p>Atención eficiente y acompañamiento permanente.</p>
+</div>
+
+<div class="trust-box">
+<h3>🔒 Confianza y Seguridad</h3>
+<p>Trabajamos con responsabilidad y transparencia.</p>
+</div>
+
+<div class="trust-box">
+<h3>📈 Enfoque en Resultados</h3>
+<p>Ayudamos a impulsar tu presencia digital.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container contact" id="contacto">
 
 <h2 class="section-title">
 Contáctanos
@@ -265,12 +465,12 @@ Contáctanos
 
 <p>📍 Marinilla - Antioquia</p>
 
-<p>🌐 Atención personalizada</p>
+<p>🌐 Diseño Web y Soluciones Tecnológicas</p>
 
 <br>
 
-<a class="btn" href="https://wa.me/573167341294">
-Escríbenos por WhatsApp
+<a href="https://wa.me/573167341294" class="btn">
+Hablar por WhatsApp
 </a>
 
 </div>
@@ -279,13 +479,11 @@ Escríbenos por WhatsApp
 
 <footer>
 
-<p>
-© 2026 Soluciones Técnicas CAVA - Todos los derechos reservados.
-</p>
+© 2026 Soluciones Técnicas CAVA - Todos los derechos reservados
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/573167341294">
+<a href="https://wa.me/573167341294" class="float">
 💬
 </a>
 
