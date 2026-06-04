@@ -1,1 +1,0 @@
-# soluciones-tecnicas.cava
